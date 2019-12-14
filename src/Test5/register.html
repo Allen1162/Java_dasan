@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+    <form onsubmit="return check()">
+        <p>
+            用户名：
+            <input type="text" id="username" name="username" placeholder="请输入用户名">
+        </p>
+
+        <p>
+            密码：
+            <input type="password" id="password1" name="password1" placeholder="请输入密码">
+        </p>
+
+        <p>
+            确认密码：
+            <input type="password" id="password2" name="password2" placeholder="再次输入密码">
+        </p>
+
+        <p>
+            性别：
+            <input type="radio" name="gender" value="man" checked="checked">男
+            <input type="radio" name="gender" value="woman">女
+        </p>
+
+        <p>
+
+        </p>
+        职业：
+        <select name="select">
+            <option value="学生" selected="selected">学生</option>
+            <option value="职员" >职员</option>
+            <option value="经理" >经理</option>
+            <option value="军人" >军人</option>
+            <option value="自由人" >自由人</option>
+        </select>
+        <p>
+
+        </p>
+        个人爱好：
+        <input type="checkbox" name="电脑网络">电脑网络
+        <input type="checkbox" name="影视娱乐">影视娱乐
+        <input type="checkbox" name="棋牌娱乐">棋牌娱乐
+        <br>
+        <input type="checkbox" name="读书读报">读书读报
+        <input type="checkbox" name="美酒佳肴">美酒佳肴
+        <input type="checkbox" name="绘画书法">绘画书法
+        <p>
+
+        </p>
+
+        <p>
+            个人爱好:
+            <textarea rows="10" cols="15" >
+                请在此处输入文本...
+            </textarea>
+        </p>
+
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
+</body>
+<script type="text/javascript">
+    function check() {
+        // var username = document.getElementsByName("username");
+        // var password1 = document.getElementsByName("password1");
+        // var password2 = document.getElementsByName("password2");
+        var username = document.getElementById("username").value;
+        var pwd1 = document.getElementById("password1").value;
+        var pwd2 = document.getElementById("password2").value;
+        if(username==""){
+            alert("用户名不能为空");
+            return false;
+        }
+        if(pwd1=="" || pwd2==""){
+            alert("密码不能为空");
+            return false;
+        }
+        if(pwd1!=pwd2){
+            alert("两次密码不相等");
+            return false;
+        }
+        return true;
+    }
+
+</script>
+</html>

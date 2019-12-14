@@ -1,0 +1,71 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+
+    <servlet>
+        <servlet-name>configDemoServlet</servlet-name>
+        <servlet-class>demo.ConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>hacker@163.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>telephone</param-name>
+            <param-value>8899123</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ServerInfo</servlet-name>
+        <servlet-class>demo.ServerInfo</servlet-class>
+        <init-param>
+            <param-name>email</param-name>
+            <param-value>hacker@163.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>telephone</param-name>
+            <param-value>8899123</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>firstServlet</servlet-name>
+        <servlet-class>test.FirstServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>secondServlet</servlet-name>
+        <servlet-class>test.SecondServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>secondServlet</servlet-name>
+        <url-pattern>/secondServlet.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>firstServlet</servlet-name>
+        <url-pattern>/firstServlet.do</url-pattern>
+    </servlet-mapping>
+    
+    
+
+    <servlet-mapping>
+        <servlet-name>configDemoServlet</servlet-name>
+        <url-pattern>/configDemo.do</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ServerInfo</servlet-name>
+        <url-pattern>/ServerInfo.do</url-pattern>
+    </servlet-mapping>
+
+</web-app>
